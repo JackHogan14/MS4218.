@@ -1,0 +1,17 @@
+##ADVANCED DATA MODELLING LAB 1:
+install.packages("dplyr")
+library(dplyr)
+#Q1:sessionInfo() # All tools used in this library package
+data(mtcars)
+mtcars # shows inbuilt dataset
+mtcars %>% head() # Head = take first few values
+#Q2:dim(mtcars)nrow(mtcars)ncol(mtcars)names(mtcars) # first 5class(mtcars)
+summary(mtcars) #Gives all info on dataset
+summary(iris)glimpse(iris) # Tells you whether data is categorical/quantitative
+filter(iris, Species == "Setosa")
+iris2 <- iris %>% filter(Species== "Setosa") #Setting a new variable: iris2
+dim(iris2)
+iris3 <- iris %>% filter(Sepal.Length > 2)dim(iris3)
+iris3 <- iris %>% filter(Sepal.Length > 5)#filtering to know how many sepal lengths are greater than 5dim(iris3)
+iris3 <- iris %>% filter(Sepal.Length > 5.2)dim(iris3)iris3 <- iris %>% filter(Sepal.Length > 5.4)dim(iris3)iris3 <- iris %>% filter(Sepal.Length > 5.6)dim(iris3)
+history(600) # returns all code typed in a session
